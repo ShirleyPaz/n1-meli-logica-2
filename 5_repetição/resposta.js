@@ -1,9 +1,17 @@
-Utilizando for, while ou do.. while, faça os seguintes exercícios:
-
+const r = require("readline-sync");
+/*
 1) Crie um programa para printar todos os números pares de 1 a 100.
 - Números pares são todos os números que dividos por 2 tem resto 0
 - Qual operador que retorna o resto da divisão? Vamos usar ele!
+*/
 
+// for(let i=1; i <= 100; i++){
+//     if(i % 2 === 0){
+//         console.log(i);
+//     }
+// }
+
+/*
 2) Crie um programa gerador de estrelas. O usuário informa um número, e o programa gera uma pirâmide de estrelas no seguinte formato:
 // Ex.: Usuário informa 5 e o programa retorna
 // *
@@ -12,43 +20,46 @@ Utilizando for, while ou do.. while, faça os seguintes exercícios:
 // * * * * 
 // * * * * * 
 - Você pode concatenar uma string usando: + ou +=
+*/
 
+// let numeroDigitado = parseInt(r.question("Informe a quantidad de estrelas que você deseja gerar"));
+// let estrelas = "";
+
+// for(let i=0; i<= numeroDigitado;i++){
+//     estrelas += "*";
+//     console.log(estrelas);
+// }
+
+/*
 3) Crie um programa que pergunta ao usuário seu nome. Depois que o usuário digitar o nome, o programa deverá responder "Olá [nome]".
 Enquanto usuário digitar qualquer palavra, print o que ele está digitando mas avise que para sair ele pode dizer "Tchau".
 O programa vai dizer "Tchau [nome]" e finalizar o programa.
 - Aqui você pode usar while ou do/while para resolver
+ */
 
+//  let nome = r.question("Digite seu nome: ");
+//  console.log("Olá "+ nome);
+
+//  let texto = "";
+
+//  do{
+//      texto = r.question("Digite algum comando ou 'Tchau' para sair");
+//      console.log("Você digitou: " + texto);
+//  }while(texto != "Tchau");
+
+//  console.log("Tchau " + nome);
+
+/*
 4) Crie um  programa contador de passos, que acumule os valores de passos informados pelo usuário até que a meta seja atingida.
 A meta a ser atingida é de 500 passos.
 - Aqui você pode usar while ou do/while para resolver, mas tente resolver com o que você não utilizou no exercicio 3.
+*/
 
+// let passos = 0;
+// const meta = 500;
 
----
+// while(passos < meta){
+//     passos += parseInt(r.question("Informe a quantidade de passos: "));
+// }
 
-Desafios extras:
-
-5) Crie um programa que receba 10 números digitados no cmd. Ordene esse números em ordem crescente usando o Bubble Sort, utilizando loops e printe na tela.
-Exemplo:
-Recebendo: [5, 350, 15, 36, 5000, 30, 90, 1, 88, 450]
-Ordenando: [1, 5, 15, 30, 36, 88, 90, 350, 450, 5000]
-
-6) Agora, crie um programa que receba 10 números digitados no cmd. Ordene esse números em ordem decrescente usando o Bubble Sort, utilizando loops e printe na tela.
-Exemplo:
-Recebendo: [5, 350, 15, 36, 5000, 30, 90, 1, 88, 450]
-Ordenando: [5000, 450, 350, 90, 88, 36, 30, 15, 5, 1]
-
-7) Dada a lista [10,11,12,13], a cada par troque os números de lugar. Utilizando loopd, você não poderá modificar os valores da lista, apenas trocar os indeces de lugar.
-Resultado esperado: [11,10,13,12]
-
-8) Dados n pares de parênteses, crie um programa para gerar todas as combinações de parênteses possíveis.
-Exemplo: 
-Recebendo: n = 3
-Resposta esperada: 
-[
-  "((()))",
-  "(()())",
-  "(())()",
-  "()(())",
-  "()()()"
-]
-Dica: Veja sobre os as funções pop() e push() disponíveis em um array.
+// console.log("Parabéns! Você atingiu a meta: " + passos);
